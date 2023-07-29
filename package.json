@@ -1,0 +1,19 @@
+{
+  "name": "pack-pc-server",
+  "version": "1.0.0",
+  "description": "Server of the Pack PC for Programming Hero Assignment 6",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "S M Ahaduzzaman",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
