@@ -8,8 +8,8 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-const username = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
+const username = "packpc";
+const password = "SAim654oTswoQaIk";
 
 const uri = `mongodb+srv://${username}:${password}@cluster0.fceds.mongodb.net/?retryWrites=true&w=majority`;
 console.log(uri);
@@ -41,7 +41,7 @@ async function run() {
 
     app.get("/categories", async (req, res) => {
       const cursor = categoriesCollection.find({});
-      // cursor.sort({ name: 1 });
+      cursor.sort({ name: -1 });
       const categories = await cursor.toArray();
       res.send(categories);
     });
